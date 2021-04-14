@@ -22,7 +22,7 @@ file(GLOB_RECURSE sourceFiles
 set(ExternalFolder ../../External)
 set(TargetName OIViewer)
 add_executable (${TargetName} ${sourceFiles} )
-
+set_property(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR} PROPERTY VS_STARTUP_PROJECT ${TargetName}) #this will set OIViewer as the startup project for the foo.sln solution.
 
 
 
